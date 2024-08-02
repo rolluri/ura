@@ -25,7 +25,7 @@ class uraRuGrabber:
         self.url = 'https://ura.news/news/1052773324'
         self.options = webdriver.ChromeOptions()
         self.service = Service(executable_path = ChromeDriverManager().install())
-        self.driver = uc.Chrome(options=self.options,service = self.service, version_main= 121)
+        self.driver = uc.Chrome(version_main= 121)
         self.waiter = WebDriverWait(self.driver, 5)
         self.scroll_to_element = ActionChains(self.driver)
         with open('elementAttribute.json','r') as x:
@@ -75,7 +75,7 @@ class uraRuGrabber:
 
             date_news = self.waiter.until(
                 EC.presence_of_element_located((By.CLASS_NAME, self.elementAttribute['dateNews'])))
-
+            print(f'{date_news}\n{only_text_news}\n{all_text_news}\n{author_news}\n{news_title}')
         except Exception as ex:
             print(f'ERROR in read_news_columns {ex}')
 
@@ -84,7 +84,7 @@ class uraRuGrabber:
         try:
             self.driver.maximize_window()
             self.driver.get(url=self.url)
-            self.read_comments_text()
+            self.read_news_columns()
         except Exception as ex:
             print(f'ERROR in set_web_page {ex}')
         
