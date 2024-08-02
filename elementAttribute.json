@@ -1,0 +1,14 @@
+{
+    "titleNews": "/html/body/div[1]/div/div[3]/div[2]/div[2]/div[1]/div[1]/div/h1",
+    "topicNews": "/html/body/div[1]/div/div[3]/div[2]/div[2]/div/div[1]/div/div[1]",
+    "textNews": "p",
+    "authorNews": "author-subscribe",
+    "allTextNews": "item-text",
+    "dateNews" : "time2",
+    "commentWrapperClass": "no-print",
+    "btnShowAllComment" : "btn btn-bordered btn-comments-expand",
+    "author": "",
+    "commentWrapper": "/html/body/div[1]/div/div[3]/div[2]/div[2]/div[1]/div[1]/div/div[9]/comments-tree/div/div[5]/div/div[1]/input",
+    "commentButton": "/html/body/div[1]/div/div[3]/div[2]/div[2]/div[1]/div[1]/div/div[9]/comments-tree/div/div[3]/div[1]",
+    "closeThisPleas": "bannerStickyClose"
+}
